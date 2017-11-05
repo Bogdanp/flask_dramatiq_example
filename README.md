@@ -25,3 +25,4 @@ flask_dramatiq_example is licensed under Apache 2.0.  Please see
 [flask]: http://flask.pocoo.org/
 [postgres]: https://www.postgresql.org/
 [rabbitmq]: https://www.rabbitmq.com/
+[license]: https://github.com/Bogdanp/flask_dramatiq_example/blob/master/LICENSE
