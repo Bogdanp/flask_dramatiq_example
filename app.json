@@ -1,0 +1,20 @@
+{
+  "name": "flask_dramatiq_example",
+  "description": "An example app demonstrating how you can use Dramatiq with Flask.",
+  "repository": "https://github.com/Bogdanp/flask_dramatiq_example",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "pipenv run python -c 'from app import Model, database; Model.metadata.create_all(database)'"
+  },
+  "formation": {
+    "web": {"quantity": 1},
+    "worker": {"quantity": 1}
+  },
+  "buildpacks": [
+    {"url": "heroku/python"}
+  ],
+  "addons": [
+    "heroku-postgresql",
+    "cloudamqp:lemur"
+  ]
+}

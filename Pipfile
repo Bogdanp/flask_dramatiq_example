@@ -1,0 +1,19 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+name = "pypi"
+verify_ssl = true
+
+
+[packages]
+
+dramatiq = {extras = ["rabbitmq", "watch"]}
+flask = "*"
+sqlalchemy = "*"
+"psycopg2" = "*"
+gunicorn = "*"
+
+
+[dev-packages]
+
+pytest = "*"

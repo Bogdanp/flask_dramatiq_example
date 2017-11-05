@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Jobs</h1>
+    {% if not jobs %}
+      <p>There are no jobs yet.</p>
+    {% else %}
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Created at</th>
+        </tr>
+        {% for job in jobs %}
+          <tr>
+            <td>{{ job.type }}</td>
+            <td>{{ job.status }}</td>
+            <td>{{ job.created_at }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+
+    <h2>Submit a job</h2>
+    <form action="/jobs" method="POST">
+      <label>Job type
+        <select name="type">
+          <option value="slow">Slow</option>
+          <option value="fast">Fast</option>
+        </select>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
