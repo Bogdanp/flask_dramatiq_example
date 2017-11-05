@@ -13,7 +13,7 @@ from sqlalchemy.sql import func
 
 app = Flask(__name__)
 
-database_url = os.getenv("DATABASE_URL")
+database_url = os.getenv("DATABASE_URL", os.getenv("SQLITE_URL"))
 database = create_engine(database_url)
 Model = declarative_base()
 Session = sessionmaker(bind=database)
