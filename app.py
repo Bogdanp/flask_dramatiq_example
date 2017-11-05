@@ -18,7 +18,7 @@ database = create_engine(database_url)
 Model = declarative_base()
 Session = sessionmaker(bind=database)
 
-broker_url = os.getenv("BROKER_URL")
+broker_url = os.getenv("CLOUDAMQP_URL", os.getenv("BROKER_URL"))
 broker = URLRabbitmqBroker(broker_url)
 dramatiq.set_broker(broker)
 
