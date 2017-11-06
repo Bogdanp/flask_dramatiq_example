@@ -11,6 +11,7 @@
     "worker": {"quantity": 1}
   },
   "buildpacks": [
+    {"url": "https://github.com/heroku/heroku-buildpack-pgbouncer"},
     {"url": "heroku/python"}
   ],
   "addons": [

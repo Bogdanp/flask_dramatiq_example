@@ -1,2 +1,2 @@
-web: pipenv run gunicorn app:app --log-file -
-worker: pipenv run dramatiq app -p4
+web: bin/start-pgbouncer-stunnel pipenv run gunicorn app:app --log-file -
+worker: bin/start-pgbouncer-stunnel pipenv run dramatiq app -p4
