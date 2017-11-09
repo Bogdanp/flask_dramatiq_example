@@ -36,9 +36,9 @@
         },
         "dramatiq": {
             "hashes": [
-                "sha256:226bd62bb844e4464cca7e1bf82d45e5b6ada8788b227d1470ad32ff415d5627"
+                "sha256:8356e48255a0f9e3b8e5b563138ce2ad307fa5e1abac75325aef33bb2c4f2cce"
             ],
-            "version": "==0.10.1"
+            "version": "==0.11.0"
         },
         "flask": {
             "hashes": [
@@ -62,10 +62,10 @@
         },
         "jinja2": {
             "hashes": [
-                "sha256:2231bace0dfd8d2bf1e5d7e41239c06c9e0ded46e70cc1094a0aa64b0afeb054",
-                "sha256:ddaa01a212cd6d641401cb01b605f4a4d9f37bfc93043d7f760ec70fb99ff9ff"
+                "sha256:74c935a1b8bb9a3947c50a54766a969d4846290e1e788ea44c1392163723c3bd",
+                "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
             ],
-            "version": "==2.9.6"
+            "version": "==2.10"
         },
         "markupsafe": {
             "hashes": [
