@@ -36,9 +36,9 @@
         },
         "dramatiq": {
             "hashes": [
-                "sha256:8356e48255a0f9e3b8e5b563138ce2ad307fa5e1abac75325aef33bb2c4f2cce"
+                "sha256:a8755a6ed4378149f84788cde51f6e059bc051065cae01cd856a818b2b44e107"
             ],
-            "version": "==0.11.0"
+            "version": "==0.13.0"
         },
         "flask": {
             "hashes": [
@@ -139,17 +139,17 @@
     "develop": {
         "py": {
             "hashes": [
-                "sha256:2ccb79b01769d99115aa600d7eed99f524bf752bba8f041dc1c184853514655a",
-                "sha256:0f2d585d22050e90c7d293b6451c83db097df77871974d90efd5a30dc12fcde3"
+                "sha256:1ccf86c56a62fcb66c9e4e4f5cc9b5c3f26ce5ff2dbe561b5e24474e7239de09",
+                "sha256:b3ec4564d622d7b0ef015bf48064b77906fb82d802be165951791df30b0345ca"
             ],
-            "version": "==1.4.34"
+            "version": "==1.5.0"
         },
         "pytest": {
             "hashes": [
-                "sha256:81a25f36a97da3313e1125fce9e7bbbba565bc7fec3c5beb14c262ddab238ac1",
-                "sha256:27fa6617efc2869d3e969a3e75ec060375bfb28831ade8b5cdd68da3a741dc3c"
+                "sha256:241d7e7798d79192a123ceaf64c602b4d233eacf6d6e42ae27caa97f498b7dc6",
+                "sha256:6d5bd4f7113b444c55a3bbb5c738a3dd80d43563d063fc42dcb0aaefbdd78b81"
             ],
-            "version": "==3.2.3"
+            "version": "==3.2.5"
         }
     }
 }
