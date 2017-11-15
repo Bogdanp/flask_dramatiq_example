@@ -23,6 +23,26 @@ broker = URLRabbitmqBroker(broker_url)
 dramatiq.set_broker(broker)
 
 
+class AppContextMiddleware(dramatiq.Middleware):
+    def __init__(self, app):
+        self.app = app
+
+    def before_process_message(self, broker, message):
+        context = self.app.app_context()
+        context.push()
+        message.options["flask_app_context"] = context
+
+    def after_process_message(self, broker, message, *, result=None, exception=None):
+        context = message.options.pop("flask_app_context", None)
+        if context:
+            context.pop(exception)
+
+    after_skip_message = after_process_message
+
+
+broker.add_middleware(AppContextMiddleware(app))
+
+
 class Job(Model):
     __tablename__ = "jobs"
 
