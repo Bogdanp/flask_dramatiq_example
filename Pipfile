@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 
-dramatiq = {extras = ["rabbitmq"]}
+dramatiq = {extras = ["rabbitmq", "watch"]}
 flask = "*"
 sqlalchemy = "*"
 "psycopg2" = "*"
