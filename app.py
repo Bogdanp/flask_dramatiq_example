@@ -9,6 +9,7 @@ from sqlalchemy import Column, DateTime, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql import func
+from threading import local
 
 
 app = Flask(__name__)
@@ -24,18 +25,24 @@ dramatiq.set_broker(broker)
 
 
 class AppContextMiddleware(dramatiq.Middleware):
+    state = local()
+
     def __init__(self, app):
         self.app = app
 
     def before_process_message(self, broker, message):
         context = self.app.app_context()
         context.push()
-        message.options["flask_app_context"] = context
+
+        self.state.context = context
 
     def after_process_message(self, broker, message, *, result=None, exception=None):
-        context = message.options.pop("flask_app_context", None)
-        if context:
+        try:
+            context = self.state.context
             context.pop(exception)
+            del self.state.context
+        except AttributeError:
+            pass
 
     after_skip_message = after_process_message
 
