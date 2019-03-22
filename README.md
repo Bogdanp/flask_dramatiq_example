@@ -4,6 +4,8 @@
 
 An example app demonstrating how you can use [Dramatiq][dramatiq] with [Flask][flask].
 
+**:warning: A full-featured [Flask-Dramatiq](https://flask-dramatiq.rtfd.io) extension is now available! :cake:**
+
 
 ## Setup
 
